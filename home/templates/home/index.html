@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Homepage</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<h1>hello everyone</h1>
+		<p>Hi it's my first project.Lorem</p>
+		<h1>arae ab toh start ho ja</h1>
+		{{peoples}}
+		{% comment %} for printing the data in django  {% endcomment %}
+		<table border="2px">
+			<tr>
+			  <th>Sno</th>
+			  <th>name</th>
+			  <th>age</th>
+			  <th>can vote</th>
+			</tr>
+			{%for people in peoples%}
+			{% comment %} for writing the custom tabs or for loop {% endcomment %}
+			<tr>
+			  <td>{{forloop.counter}}</td>
+			  <td>{{people.name}}</td>
+			  <td>{{people.age}}</td>
+			  <td {% if people.age < 18 %} style="background:red"{% endif %}>
+				{% if people.age >= 18 %}
+                   👍 
+                {% else %}
+                   👎 
+                {% endif %}
+		      </td>
+			</tr>
+			{%endfor%}
+		  </table>
+		  <p>{{text}}</p>
+		  <a href="contact/">contact</a>
+		  <a href="about/">about</a>
+		<script src="" async defer>
+			console.log("hello");
+		</script>
+	</body>
+</html>
