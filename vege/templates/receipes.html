@@ -37,6 +37,17 @@
                 <button type="submit" class="btn btn-success mt-3">Add receipe</button>
               </form>
         </div>
+        <hr>
+          <form class="p-3">
+              <div class="form-group">
+                <input type="text" class="form-control"placeholder="Enter receipe name" name="search">
+              </div>
+              <button type="submit" class="btn btn-primary mt-3">search receipe</button>
+            </form>
+      
+
+
+
         <div class="container mt-5">
             <h2>The Receipes are:</h2>
             <table class="table table-bordered">
@@ -57,6 +68,7 @@
                    <img src="/media/{{receipe.receipe_image}}" style="height:100px;width:100px">
                   </td>
                   <td><a href="/delete-receipe/{{receipe.id}}"><button type="submit" class="btn btn-danger">Delete </button></a></td>
+                  <td><a href="/update-receipe/{{receipe.id}}"><button type="submit" class="btn btn-success">Update </button></a></td>
                 </tr>
                 {%endfor%}
               </table>
